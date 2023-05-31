@@ -1,23 +1,29 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import "./Images/ambulancegiphy.gif";
+import { useRef } from "react";
 
 function App() {
+  const windowSize = useRef([window.innerWidth, window.innerHeight]);
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div className="App-header">
+        <div className="blank"></div>
+        <text className="text">AmbiPower Super-Service</text>
+      </div>
+      <div
+        className="centerlogo"
+        width={windowSize.current[0] * 0.6}
+        height={windowSize.current[1] * 0.6}
+      >
+        <img src={require("./Images/ambulancegiphy.gif")} />
+      </div>
+      <text className="boldtext">Ambulance at your door-step!</text>
+      <br />
+      <br />
+      <br />
+      <div className="box">
+        <text className="Logintext">Login to Explore</text><img className="rightarrow" src={require("./Images/rightArrow.png")} />
+      </div>
     </div>
   );
 }
