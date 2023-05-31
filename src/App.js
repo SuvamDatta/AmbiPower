@@ -4,6 +4,9 @@ import { useRef } from "react";
 
 function App() {
   const windowSize = useRef([window.innerWidth, window.innerHeight]);
+  const shoot = () => {
+    alert("Great Shot!");
+  }
   return (
     <div className="App">
       <div className="App-header">
@@ -21,9 +24,11 @@ function App() {
       <br />
       <br />
       <br />
-      <div className="box">
-        <text className="Logintext">Login to Explore</text><img className="rightarrow" src={require("./Images/rightArrow.png")} />
-      </div>
+      <button className="box" type="submit" onClick={shoot}>
+        <text className="Logintext">Login to Explore</text>
+        <img className="rightarrow" src={require("./Images/rightArrow.png")} />
+      </button>
+      
     </div>
   );
 }
